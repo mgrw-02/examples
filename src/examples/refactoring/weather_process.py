@@ -1,6 +1,7 @@
-"""Assignment 1"""
+"""Assignment 1 - Miu Grewe"""
 import csv
 import numpy as np
+
 
 ### Constants
 OFFSET_C_TO_F = 32
@@ -34,16 +35,16 @@ def avg_windspeed(ds):
     return avg_ws
 
 ### Dataset
-file = open(PATH_TO_WEATHERDATA)
-ds =list(csv.reader(file))
+# getting Dataset
+file=open(PATH_TO_WEATHERDATA)
+ds=list(csv.reader(file))
 file.close()
 
 # Changing Dataset
 ds = ds[1:] # remove first row
-data=[]
+data=[] # new list with only first 5 variables from dataset
 for i in ds:
     data.append([i[0],i[1],i[2],i[3],i[4]])
-
 
 ### Start Calculations
 # Temperature
